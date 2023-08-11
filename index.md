@@ -25,14 +25,14 @@ Concentration: VLSI Design / Digital Systems Design
 - Assisted in preparing 60,000 student laptops for the rapid adoption of online learning due to COVID-19.
 
 ## Projects
+Due to University policy I am not able to publicly post code or files for many of these projects, but if you're curious (and not a UW student) feel free to reach out on LinkedIn for any files or code.
 
 ### Circuit Design and Analysis
 For the final lab of my EE331 course, students were tasked with designing an adjustable AC to DC power supply from scratch. The power supply took in 7.5V RMS AC current and output 10-20V DC adjustable with a potentiometer. Below is the block diagram for my design.  
-![p1a](./assets/img/p1a.png)  
+![p2a](./assets/img/p2a.png)  
 
-This is the final schematic for my design:
-![p2a](./assets/img/p1b.png)  
+The final schematic for my design:
+![p2b](./assets/img/p2b.png)  
 
 And this is my simulation results measuring the DC output across a 10k load. Each line is a different simulated 'percentage' on the potentiometer.
-![p1c](./assets/img/p1c.png)
-
+![p2c](./assets/img/p2c.png)
