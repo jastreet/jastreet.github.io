@@ -25,7 +25,19 @@ Concentration: VLSI Design / Digital Systems Design
 - Assisted in preparing 60,000 student laptops for the rapid adoption of online learning due to COVID-19.
 
 ## Projects
-Due to University policy I am not able to publicly post code or files for many of these projects, but if you're curious (and not a UW student) feel free to reach out on LinkedIn for any files or code.
+Due to University policy I am not able to publicly post code or files for many of these projects, but if you're curious (and not a UW student) feel free to reach out on LinkedIn for any files or code.  
+(If any images are too small, right click -> open image in new tab)
+
+### Computer Architecture
+By graduation, I will have taken at least six computer architecture courses using SystemVerilog, and C on the ARMv7 architecture. So far, the most challenging task I've completed is the implementation of a 5-cycle pipelined ARM CPU from Digital Design and Computer Architecture ARM® Edition by Sarah L. Harris and David Money Harris. Below is the textbook's CPU diagram complete with full hazard protection and pipelining.
+![p1a](./assets/img/p1a.png)  
+
+As they say, there is only one way to eat an elephant: one bite at a time. So I began by moving up in layers of abstraction starting at the very beginning, a 1-bit full-adder SystemVerilog module. Then, writing a 32-bit full-adder module. Now with a 32-bit full adder, I was able to write an ALU for arithmetic operations. And after writing the register file module, I was able to begin splitting up the CPU by segmenting each cycle (Fetch, Decode, Execute, Memory, Writeback) into a separate SV module. This is the block diagram with each control signal going between each stage.
+![p1b](./assets/img/p1b.png)  
+
+
+Next it was simply a matter of consulting the ARM reference manual for the various instructions with their respective machine code, setting ALUFlags with the Cond unit and implementing the combinational logic of the Hazard Unit. Finally, I wrote a simple ARM program to make use of stalling, flushing, and branching. Below is a screenshot from the top-level module of the CPU executing the test program, each line is one of the various control signals accessible by the top-level module. Take note of the PCPlus8D (Program Counter) line moving through each word of the instruction memory.
+![p1c](./assets/img/p1c.png)
 
 ### Circuit Design and Analysis
 For the final lab of my EE331 course, students were tasked with designing an adjustable AC to DC power supply from scratch. The power supply took in 7.5V RMS AC current and output 10-20V DC adjustable with a potentiometer. Below is the block diagram for my design.  
