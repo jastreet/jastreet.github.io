@@ -59,15 +59,15 @@ Here is an example of audio smoothing I implemented using numpy and matplotlib. 
 
 sample_rate = 1000 
 time  = np.arange(0,2,1/sample_rate) 
-n     = len(time)
+n = len(time)
 
-p     = 10 # points for piecewise linear signal
+p = 10 # points for piecewise linear signal
 amp = 20   # amplitude range of base signal
 base = np.interp(np.linspace(0,p,n),np.arange(0,p),np.random.rand(p)*amp)
 
 # Create some random noise to be added to the above base signals
 noiseamp = 2
-noise  = noiseamp * np.random.randn(n)
+noise = noiseamp * np.random.randn(n)
 
 noisy = noise + base
 ```
@@ -78,7 +78,7 @@ Next, using convolution I smooth the signal with SciPy.
 # Use signal.lfilter to apply my filter
 
 mean_filter = np.zeros(len(noisy))
-k=10
+k = 10
 
 N = 2 * k + 1
 
