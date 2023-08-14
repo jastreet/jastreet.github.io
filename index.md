@@ -48,3 +48,54 @@ The final schematic for my design:
 
 And this is my simulation results measuring the DC output across a 10k load. Each line is a different simulated 'percentage' on the potentiometer.
 ![p2c](./assets/img/p2c.png)
+
+### Signals Processing
+
+#### Audio Filtering
+Here is an example of audio smoothing I implemented using numpy and matplotlib. First I create a random noisy audio signal.
+
+```python
+# Base and noise signal
+
+sample_rate = 1000 
+time  = np.arange(0,2,1/sample_rate) 
+n     = len(time)
+
+p     = 10 # points for piecewise linear signal
+amp = 20   # amplitude range of base signal
+base = np.interp(np.linspace(0,p,n),np.arange(0,p),np.random.rand(p)*amp)
+
+# Create some random noise to be added to the above base signals
+noiseamp = 2
+noise  = noiseamp * np.random.randn(n)
+
+noisy = noise + base
+```
+![p3a](./assets/img/p3a.png)
+
+Next, using convolution I smooth the signal with SciPy.
+```python
+# Use signal.lfilter to apply my filter
+
+mean_filter = np.zeros(len(noisy))
+k=10
+
+N = 2 * k + 1
+
+a = [1]
+hfilt = np.ones(N)* 1/N
+b = hfilt
+
+filtsig1 = np.convolve(base, hfilt)
+time1 = np.arange(0,2020)
+time2 = np.arange(0,2000)
+
+fig = plt.figure(figsize = (8,8))
+plt.plot(time1, filtsig1, color = 'blue')
+
+
+filtsig2 = sig.lfilter(b, a, noisy)
+plt.plot(time2, filtsig2, color = 'red')
+```
+![p3b](./assets/img/p3b.png)
+
