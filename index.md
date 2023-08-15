@@ -2,7 +2,7 @@
 layout: default
 ---
 
-[My Resume](./assets/JASResume2023.pdf)
+<a href="./assets/JASResume2023.pdf" target="_blank">My Resume</a>
 
 ### Skills: C, ARM, SystemVerilog, Python, MATLAB
 
@@ -29,6 +29,7 @@ Due to University policy I am not able to publicly post code or files for many o
 (If any images are too small, right click -> open image in new tab)
 
 ### Computer Architecture
+#### Pipelined CPU
 By graduation, I will have taken at least six computer architecture courses using SystemVerilog, and C on the ARMv7 architecture. So far, the most challenging task I've completed is the implementation of a 5-cycle pipelined ARM CPU from Digital Design and Computer Architecture ARM® Edition by Sarah L. Harris and David Money Harris. Below is the textbook's CPU diagram complete with full hazard protection and pipelining.
 ![p1a](./assets/img/p1a.png)  
 
@@ -38,6 +39,61 @@ As they say, there is only one way to eat an elephant: one bite at a time. So I 
 
 Next it was simply a matter of consulting the ARM reference manual for the various instructions with their respective machine code, setting ALUFlags with the Cond unit and implementing the combinational logic of the Hazard Unit. Finally, I wrote a simple ARM program to make use of stalling, flushing, and branching. Below is a screenshot from the top-level module of the CPU executing the test program, each line is one of the various control signals accessible by the top-level module. Take note of the PCPlus8D (Program Counter) line moving through each word of the instruction memory.
 ![p1c](./assets/img/p1c.png)
+
+#### IEEE-754 Addition
+Another task was the implementation of <a href="./assets/img/p1d.png" target="_blank">IEEE-754</a> floating point addition in ARMv7 Assembly. The steps given in the Harris and Harris textbook are as follows:
+1. Extract exponent and fraction bits.
+2. Prepend leading 1 to form the mantissa.
+3. Compare exponents.
+4. Shift smaller mantissa if necessary.
+5. Add mantissas.
+6. Normalize mantissa and adjust exponent if necessary.
+7. Round result.
+8. Assemble exponent and fraction back into floating-point number.  
+
+Below is the ARM implementation commented with C pseudo-code.
+```ARM
+floatAddition:
+	// R1 = A, R2 = B, R0 = return value (result)
+	PUSH {R3, R4, R5, R6, R7, R8}
+	MOVW R8, #0xFFFF         // exponentMask = 0x7F800000
+	MOVT R8, #0x7F
+	MOVW R7, #0x0            // mantissaMask = 0x7FFFFF
+	MOVT R7, #0x7F80
+	AND R3, R1, R8           // mantissaA = (A & mantissaMask) | mantissaLeadingOne
+	ORR R3, R3, #0x800000
+	AND R4, R1, R7           // exponentA = (A & exponentMask) >> 23
+	LSR R4, R4, #23
+	AND R5, R2, R8           // mantissaB = (B & mantissaMask) | mantissaLeadingOne
+	ORR R5, R5, #0x800000
+	AND R6, R2, R7           // exponentB = (B & exponentMask) >> 23
+	LSR R6, R6, #23
+	
+	exponentLoop:
+		CMP R4, R6
+		BEQ addMantissas     // while exponentA != exponentB
+		MOVLT R3, R3, LSR #1 // if (exponentA < exponentB) mantissaA >>= 1; exponentA++
+		ADDLT R4, R4, #1
+		MOVGT R5, R5, LSR #1 // else mantissaA >>= 1; exponentA++;
+		ADDGT R6, R6, #1
+		B exponentLoop
+		
+	addMantissas:
+		ADD R7, R3, R5     // addedMantissa = mantissaA + mantissaB
+	
+	CMP R7, #0x1000000    // if addedMantissa > mantissaOverflowBit
+	MOVGT R7, R7, LSR #1  // addedMantissa >>= 1
+	ADDGT R4, R4, #1      // exponentA++
+	
+	AND R7, R7, R8        // result = (addedMantissa & mantissaMask) + (exponentA << 23)
+	MOV R0, R4, LSL #23
+	ADD R0, R7, R0
+	
+	POP {R3, R4, R5, R6, R7, R8}
+	MOV PC, LR               // return result
+
+END:
+```
 
 ### Circuit Design and Analysis
 For the final lab of my EE331 course, students were tasked with designing an adjustable AC to DC power supply from scratch. The power supply took in 7.5V RMS AC current and output 10-20V DC adjustable with a potentiometer. Below is the block diagram for my design.  
@@ -52,7 +108,7 @@ And this is my simulation results measuring the DC output across a 10k load. Eac
 ### Signals Processing
 
 #### Audio Filtering
-Here is an example of audio smoothing I implemented using numpy and matplotlib. First I create a random noisy audio signal.
+Here is an example of audio smoothing I implemented using NumPy, SciPy, and matplotlib. First I create a random noisy audio signal.
 
 ```python
 # Base and noise signal
