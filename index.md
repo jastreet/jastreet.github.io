@@ -17,6 +17,9 @@ Concentration: VLSI Design / Digital Systems Design
 - Implemented a patented multi-grid power management system using Python on a prototype class A motorhome retrofitted with solar panels.
 - Designed hardware agnostic database schema to support multiple brands of solar inverters.
 
+**President @ UW Engineering Student Council (_June 2023 - Present_)**
+ - Wrote new UWESC Constitution, currently under review for ratification.
+
 **Vice President @ Husky Flying Club (_Sept 2020 - Present_)**
 - Successfully planned, pitched, and managed a $105,811 grant to build the first UW light-sport aircraft awarded by the Student Tech Fund Committee.
 
