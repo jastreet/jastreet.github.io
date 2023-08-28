@@ -4,7 +4,7 @@ layout: default
 
 <a href="./assets/JASResume2023.pdf" target="_blank">My Resume</a>
 
-### Skills: C, ARM, SystemVerilog, Python, MATLAB
+### Skills: SystemVerilog, C, ARM, Python, MATLAB
 
 ## Education
 B.S. Electrical and Computer Engineering  
@@ -33,7 +33,7 @@ Due to University policy I am not able to publicly post code or files for many o
 
 ### Computer Architecture
 #### Pipelined CPU
-By graduation, I will have taken at least six computer architecture courses using SystemVerilog, and C on the ARMv7 architecture. So far, the most challenging task I've completed is the implementation of a 5-cycle pipelined ARM CPU from Digital Design and Computer Architecture ARM® Edition by Sarah L. Harris and David Money Harris. Below is the textbook's CPU diagram complete with full hazard protection and pipelining.
+By graduation, I will have taken at least six computer architecture courses using SystemVerilog, and C on the ARMv7 architecture. So far, the most challenging task I've completed is the implementation of a 5-cycle pipelined ARM CPU from _Digital Design and Computer Architecture ARM® Edition_ by Sarah L. Harris and David Money Harris. Below is the textbook's CPU diagram complete with full hazard protection and pipelining.
 ![p1a](./assets/img/p1a.png)  
 
 As they say, there is only one way to eat an elephant: one bite at a time. So I began by moving up in layers of abstraction starting at the very beginning, a 1-bit full-adder SystemVerilog module. Then, writing a 32-bit full-adder module. Now with a 32-bit full adder, I was able to write an ALU for arithmetic operations. And after writing the register file module, I was able to begin splitting up the CPU by segmenting each cycle (Fetch, Decode, Execute, Memory, Writeback) into a separate SV module. This is the block diagram with each control signal going between each stage.
@@ -158,3 +158,27 @@ plt.plot(time2, filtsig2, color = 'red')
 ```
 ![p3b](./assets/img/p3b.png)
 
+### Personal Projects
+My passion for digital logic and the 'magic' of what makes computers work has been a long affair. I vividly remember being 11 years old and getting Ron White's _How Computers Work: The Evolution of Technology_ for Christmas (my parents are also nerds). The book had plain and understandable illustrations of logic gates, RAM layouts, adders, flip-flops, and many other topics of what I now understand as Computer Architecture. At the time I had a very limited conception of everything but the mystery was part of the fun. 
+
+#### Briel Computers Altair 8800-Micro
+For my 12th birthday, the only thing I asked for was a Briel Computers Altair 8800-Micro, sadly they are no longer available anywhere online. At this point I was obsessed with computer history and loved the story of Paul Allen writing a bootloader for Microsoft 8k BASIC on an airplane for the Altair 8800. He famously didn't test it at all before a very important meeting that started Microsoft as we know it.  
+
+This is the front panel of the kit, which I assembled in 2014. It uses 16-bit octal input for the addresses and 8 bits for the data. Using an Intel-8080 reference manual you can manually input machine code using the switches and execute assembly instructions.
+![p5a](./assets/img/p5a.JPG)
+
+Inside there is a Floppy Drive emulator that reads from an SD card so you can load CP/M or 8k BASIC. The pictured battery pack allows for persistent storage after power-off. You can actually download the 1975 version of Microsoft BASIC, load it onto the SD card, and manually program the infamous bootloader on the front panel just like Paul Allen in 1975!
+![p5b](./assets/img/p5b.JPG)
+
+Under the hood, the kit uses an Atmel ATmega which is essentially an Arduino CPU emulating an Intel-8080 with several 8k RAM chips. In this photo you can make out my terrible 12-year-old soldering job.
+![p5c](./assets/img/p5c.JPG)
+
+#### PiDP-8/I
+
+In 2016, my first year of high school, I constructed a <a href="https://obsolescence.wixsite.com/obsolescence/pidp-8" target="_blank">PDP-8 replica kit </a>that uses a Raspberry Pi Zero. It's a significantly less complicated kit that does all of the emulation on Linux using custom software instead of dedicated hardware. But the custom acrylic front panel and bamboo case is much more visually appealing.
+![p6a](./assets/img/p6a.JPG)
+
+#### PDA Collection
+
+I also have a small collection of 2000s PDAs, I only ever regularly used the Handspring Visor. Something about the functional efficiency using such bare-bones hardware is very appealing to me.
+![p7a](./assets/img/p7a.JPG)
