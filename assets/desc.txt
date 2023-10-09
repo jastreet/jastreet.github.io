@@ -1,0 +1,22 @@
+The UW Engineering Student Council is a new student body for representing the interests of College of Engineering students. Each UW Engineering Student Organization elects a representative to the ESC and student organizations receive funding from ESC organized events. The ESC also assists clubs with safety and liability details, recruiting underclassmen, and career fairs. The ESC is new to UW and was started last year by the Associate Dean for Student Affairs for the UW College of Engineering. At the end of Spring Quarter 2023, I was elected to be the first UW ESC President. Since, I have been closely working with the College of Engineering administration to grow this organization from its infancy to a fully-operational machine that enriches the lives of UW Engineering students. Currently I'm working on:
+
+- Writing a new UWESC constitution for 2023-24 to be ratified during autumn quarter.
+- Organizing with the College of Engineering Career Center to execute a new UW-managed fall career fair.
+
+Li3Go is a small Solar-RV startup based out of Las Vegas that has taken out important patents for the industry of multi-grid electrical systems in Motor-homes. The flagship product is a generator controller for RVs that have a large battery capacity and both a solar system and fossil fuel generator. The controller reads data from the solar inverters, batteries, weather data from the web, and calculates the minimum amount of time necessary to charge the batteries off fossil fuels, until solar power is next available. The goal is to always prioritize renewable energy and use the smallest amount of fossil fuels possible. I was personally hired by the CEO to create a prototype system on his Class-A Tiffin Allegro Bus. During my time at Li3Go I have:
+
+- Implemented a patented multi-grid power management system using Python on a prototype class A
+motorhome retrofitted with solar panels.
+- Designed hardware agnostic database schema to support multiple brands of solar inverters.
+- Experience socket programming with UDP and Modbus over TCP.
+- Attended Quartzsite RV trade show and presented an informational seminar.
+
+Husky Flying Club is UW's interdisciplinary aviation interest club, we not only support engineering interests of students but also general-purpose aviation. We are dedicated towards reducing the cost of Personal Pilot's Licenses for UW students by offering free ground school from a Certified Flight Instructor, free FAA certified flight simulators that count towards your PPL, along with discounted flying lessons at local flight schools. I became VP in 2020, my freshman year, and was interested in First-Person-View (FPV) racing drones. That year I worked diligently to kick-start a FPV drone racing group, raising $9,000 from the UW Student Tech Fund. My sophomore year, 2021, I worked with the HFC President on a very ambitious project to purchase a kit aircraft for the club to build on campus, with the eventual goal of getting it FAA certified. We submitted a grant proposal to the UW Student Tech Fund and it was approved for $105,811, with an additional $20,000 increase in 2023. Since, HFC has received the first batch of aircraft parts and began assembly with a 40 student build team, bringing hands on experience directly to engineering students. 
+
+During high school I connected with the Spokane Public Schools IT department, and was hired as a student intern. This was fun and relevant job experience during the summer months in high school and early college. My responsibilities included:
+
+- Upgraded hardware and software, organized and restructured computer labs.
+- Provided technical support to teachers and administrators in the summer months.
+- Installed and configured Aruba networking hardware in newly constructed schools.
+- Assisted in preparing 60,000 student laptops for the rapid adoption of online learning due to COVID-19.
+
