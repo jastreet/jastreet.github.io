@@ -16,7 +16,7 @@ Concentration: VLSI Design / Digital Systems Design
 **President @ UW Engineering Student Council (_June 2023 - Present_)**
  - Currently writing new UWESC constitution for 2023-24.
 
-**Engineer @ Li3Go (_June 2022 - Present_)**
+**Engineer @ Li3Go (_June 2022 - Aug 2023_)**
 - Implemented a patented multi-grid power management system using Python on a prototype class A motorhome retrofitted with solar panels.
 - Designed hardware agnostic database schema to support multiple brands of solar inverters.
 
