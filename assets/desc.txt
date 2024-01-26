@@ -1,9 +1,16 @@
+The University of Washington ENGINE capstone allows graduating seniors to work in-industry to receive credits required for graduaiton. I am working with T-Mobile to collect 3D RF coverage using aerial drone data to facilitate the placement of outdoor 5G antennas in order to provide home internet. This is a new initiative for T-Mobile as their 5G network is capable of supporting home internet in the milimeter wave band, however this needs far more accurate and 3D coverage data. Drones are being employed to collect this data and our team is also responsible for analyizing and visualizing the results. I am currently working on:
+
+- Writing automated flight mapping software to collect RF data in Python and Ardupilot 
+- Developing a machine learning model to interpolate 3D RF data in order to reduce flight times
+
 The UW Engineering Student Council is a new student body for representing the interests of College of Engineering students. Each UW Engineering Student Organization elects a representative to the ESC and student organizations receive funding from ESC organized events. The ESC also assists clubs with safety and liability details, recruiting underclassmen, and career fairs. The ESC is new to UW and was started last year by the Associate Dean for Student Affairs for the UW College of Engineering. At the end of Spring Quarter 2023, I was elected to be the first UW ESC President. Since, I have been closely working with the College of Engineering administration to grow this organization from its infancy to a fully-operational machine that enriches the lives of UW Engineering students. Currently I'm working on:
 
-- Writing a new UWESC constitution for 2023-24 to be ratified during autumn quarter.
-- Organizing with the College of Engineering Career Center to execute a new UW-managed fall career fair.
+- Presides over monthly UWESC meetings to bring dialogue between Engineering Student Organizations
+- Currently writing a new UWESC constitution and developing a budget for 2023-24
+- Worked with the College of Engineering to organize a career fair that raised $40,000 for student clubs 
 
-Li3Go is a small Solar-RV startup based out of Las Vegas that has taken out important patents for the industry of multi-grid electrical systems in Motor-homes. The flagship product is a generator controller for RVs that have a large battery capacity and both a solar system and fossil fuel generator. The controller reads data from the solar inverters, batteries, weather data from the web, and calculates the minimum amount of time necessary to charge the batteries off fossil fuels, until solar power is next available. The goal is to always prioritize renewable energy and use the smallest amount of fossil fuels possible. I was personally hired by the CEO to create a prototype system on his Class-A Tiffin Allegro Bus. During my time at Li3Go I have:
+
+Li3Go is a small Solar-RV startup based out of Las Vegas that has taken out important patents for the industry of multi-grid electrical systems in Motor-homes. The flagship product is a generator controller for RVs that have a large battery capacity and both a solar system and fossil fuel generator. The controller reads data from the solar inverters, batteries, weather data from the web, and calculates the minimum amount of time necessary to charge the batteries off fossil fuels, until solar power is next available. The goal is to always prioritize renewable energy and use the smallest amount of fossil fuels possible. I was personally hired by the CEO to create a prototype system on his Class-A Tiffin Allegro Bus. During my time at Li3Go I:
 
 - Implemented a patented multi-grid power management system using Python on a prototype class A
 motorhome retrofitted with solar panels.
