@@ -14,6 +14,9 @@ Concentration: VLSI Design / Digital Systems Design
 ## Experience
 
 **Capstone Controls Lead @ T-Mobile/UW (_Jan 2024 - Present_)**
+- Working on a team with T-Mobile to implement 3D RF coverage mapping using drone data.
+- Responsible for writing automated flight mapping software to collect RF/network data.
+- Developing a machine learning model to interpolate 3D data.
 
 **President @ UW Engineering Student Council (_June 2023 - Present_)**
 - Presides over monthly UWESC meetings.
