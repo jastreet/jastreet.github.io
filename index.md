@@ -13,12 +13,17 @@ Concentration: VLSI Design / Digital Systems Design
 
 ## Experience
 
+**Capstone Controls Lead @ T-Mobile/UW (_Jan 2024 - Present_)**
+
 **President @ UW Engineering Student Council (_June 2023 - Present_)**
- - Currently writing new UWESC constitution for 2023-24.
+- Presides over monthly UWESC meetings.
+- Currently writing new UWESC constitution for 2023-24.
+- Organized career fair that raised $40,000 for student clubs 
 
 **Engineer @ Li3Go (_June 2022 - Aug 2023_)**
 - Implemented a patented multi-grid power management system using Python on a prototype class A motorhome retrofitted with solar panels.
 - Designed hardware agnostic database schema to support multiple brands of solar inverters.
+- Inventor on USPTO Patent Number US11130422B1.
 
 **Vice President @ Husky Flying Club (_Sept 2020 - Present_)**
 - Successfully planned, pitched, and managed a $105,811 grant to build the first UW light-sport aircraft awarded by the Student Tech Fund Committee.
@@ -31,9 +36,25 @@ Concentration: VLSI Design / Digital Systems Design
 Due to University policy I am not able to publicly post code or files for many of these projects, but if you're curious (and not a UW student) feel free to reach out on LinkedIn for any files or code.  
 (If any images are too small, right click -> open image in new tab)
 
+### VLSI
+#### 16-bit Register File
+The final lab of my introductory VLSI course was to manually design a 16-bit register file from scratch using Cadence Virtuoso. The specifications were 13 words of 16-bit registers that have 1 synchronous write and 2 asynchronous reads.  
+
+The first order of business was to verify DRC/LVS for every single cell going all the way from a single inverter to the large 4:13 decoders. Below is the LVS report for my first ever inverter (all hand drawn).
+![vlsi1a](./assets/img/vlsi1a.png)  
+
+Next I had to get a D-Flip-Flop layout completed which would later be split into master/slave latches for the register file. Below is 16 DFF's chained together to create an LFSR that can be used for populating data into the Register File.
+![vlsi1b](./assets/img/vlsi1b.png)  
+
+Once I designed and created the layout for the 4:13 decoders, the final Register File layout began, remember completely manual no scripting! In the end I believe it was around 48 hours of total consecutive work. Below is the critical path highlighted through the write address decoder, write-enable AND gates, and a D-Flip-Flop for each bit column to synchronize the write. 
+![vlsi1c](./assets/img/vlsi1c.png)  
+
+Finally below is a zoomed out picture of the complete Register File.
+![vlsi1d](./assets/img/vlsi1d.png)
+
 ### Computer Architecture
 #### Pipelined CPU
-By graduation, I will have taken at least six computer architecture courses using SystemVerilog, and C on the ARMv7 architecture. So far, the most challenging task I've completed is the implementation of a 5-cycle pipelined ARM CPU from _Digital Design and Computer Architecture ARM® Edition_ by Sarah L. Harris and David Money Harris. Below is the textbook's CPU diagram complete with full hazard protection and pipelining.
+The final lab of my introductory Computer Architecture course was the implementation of a 5-cycle pipelined ARM CPU from _Digital Design and Computer Architecture ARM® Edition_ by Sarah L. Harris and David Money Harris. Below is the textbook's CPU diagram complete with hazard protection and pipelining.
 ![p1a](./assets/img/p1a.png)  
 
 As they say, there is only one way to eat an elephant: one bite at a time. So I began by moving up in layers of abstraction starting at the very beginning, a 1-bit full-adder SystemVerilog module. Then, writing a 32-bit full-adder module. Now with a 32-bit full adder, I was able to write an ALU for arithmetic operations. And after writing the register file module, I was able to begin splitting up the CPU by segmenting each cycle (Fetch, Decode, Execute, Memory, Writeback) into a separate SV module. This is the block diagram with each control signal going between each stage.
