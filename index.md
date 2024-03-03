@@ -78,8 +78,6 @@ In the lab specifications A and B are 32-bits. To achieve a hardware accelerator
 The design was pushed through Conformal LEC for logical equivalency, DRC/LVS, and Tempus for PPA. Below is the merged GDS file viewed in klayout.
 ![vlsi2b](./assets/img/vlsi2b.png)
 
-#### Conway's Game of Life Accelerator  
-
 ### Computer Architecture
 #### Pipelined CPU
 The final lab of my introductory Computer Architecture course was the implementation of a 5-cycle pipelined ARM CPU from _Digital Design and Computer Architecture ARM® Edition_ by Sarah L. Harris and David Money Harris. Below is the textbook's CPU diagram complete with hazard protection and pipelining.
