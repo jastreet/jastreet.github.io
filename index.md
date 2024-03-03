@@ -53,7 +53,32 @@ Once I designed and created the layout for the 4:13 decoders, the final Register
 ![vlsi1c](./assets/img/vlsi1c.png)  
 
 Finally below is a zoomed out picture of the complete Register File.
-![vlsi1d](./assets/img/vlsi1d.png)
+![vlsi1d](./assets/img/vlsi1d.png)  
+
+#### Greatest Common Denominator Accelerator  
+In my VLSI II class we use the Cadence Suite of VLSI tools. Also Synopsys for RTL/debug, and Mentor Graphics for DRC/LVS. High-level flow: RTL Simulation (Synopsys VCS) -> Verilog Synthesis (Genus) -> Formal Analysis (Conformal LEC) -> Place-and-Route (Innovus) -> Formal Analysis again -> DRC/LVS (Calibre) -> PPA Analysis (Tempus).  
+
+The first milestone in VLSI II was a hardware accelerated Euclidean greatest common denominator algorithm. The pseudo code is below.
+```
+Function GCD (inA, inB, outY)
+  A = inA
+  B = inB
+  Done = False
+  while (Done == False):
+    if (A < B): 
+      swap A and B
+    elif (B != 0):
+      A = A - B
+    else:
+      Done = True
+  outY = A
+```  
+In the lab specifications A and B are 32-bits. To achieve a hardware accelerator, Verilog modules from the UW Bespoke Silicon Groups's [basejump_stl](https://github.com/bespoke-silicon-group/basejump_stl) library were used. To pass in data bsg_link was used and compromised the majority of the ASIC layout, however this made testing and interfacing very simple. Shown below is the output from Innovus with floorplanning, bsg_link_downstream is highlighted in blue and bsg_link_upstream in yellow.  
+![vlis2a](./assets/img/vlsi2a.png)  
+The design was pushed through Conformal LEC for logical equivalency, DRC/LVS, and Tempus for PPA. Below is the merged GDS file viewed in klayout.
+![vlsi2b](./assets/img/vlsi2b.png)
+
+#### Conway's Game of Life Accelerator  
 
 ### Computer Architecture
 #### Pipelined CPU

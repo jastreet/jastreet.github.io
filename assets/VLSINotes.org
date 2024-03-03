@@ -1,0 +1,5 @@
+* GDS
+** Represents the GDSII file format, the industry standard for storing a chip's complete physical layout.
+** Contains geometrical shapes (polygons, etc.) and layer information that define the transistors and interconnections of the chip.
+** Serves as the essential blueprint sent to chip fabrication facilities for manufacturing.
+* 
