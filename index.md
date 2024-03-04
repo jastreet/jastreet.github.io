@@ -21,7 +21,7 @@ Concentration: VLSI Design / Digital Systems Design
 **Chairman @ UW Engineering Student Council (_June 2023 - Present_)**
 - Presides over monthly UWESC meetings.
 - Currently writing new UWESC constitution for 2023-24.
-- Organized career fair that raised $40,000 for student clubs 
+- Organized career fair that raised $40,000 for student clubs.
 
 **Engineer @ Li3Go (_June 2022 - Aug 2023_)**
 - Implemented a patented multi-grid power management system using Python on a prototype class A motorhome retrofitted with solar panels.
