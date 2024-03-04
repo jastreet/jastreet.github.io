@@ -18,7 +18,7 @@ Concentration: VLSI Design / Digital Systems Design
 - Responsible for writing automated flight mapping software to collect RF/network data.
 - Developing a machine learning model to interpolate 3D data.
 
-**President @ UW Engineering Student Council (_June 2023 - Present_)**
+**Chairman @ UW Engineering Student Council (_June 2023 - Present_)**
 - Presides over monthly UWESC meetings.
 - Currently writing new UWESC constitution for 2023-24.
 - Organized career fair that raised $40,000 for student clubs 
