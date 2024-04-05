@@ -79,16 +79,16 @@ The design was pushed through Conformal LEC for logical equivalency, DRC/LVS, an
 ![vlsi2b](./assets/img/vlsi2b.png)  
 
 #### Conway's Game of Life Accelerator
-The final project of my VLSI-II class was a 32x32 Conway's Game of Life board on a chip. The rules of Conway's Game of Life are simple:
-```
+The final project of my VLSI-II class was a 32x32 Conway's Game of Life board on a chip. The rules of Conway's Game of Life are simple:  
+
 1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.
 
 2. Any live cell with two or three live neighbors lives on to the next generation.
 
 3. Any live cell with more than three live neighbors dies, as if by overpopulation.
 
-4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
-```
+4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.  
+
 This was converted to a Verilog module, below is the block diagram pre-optimization. (The counter module was removed as an RTL optimization.)
 ![vlsi3a](./assets/img/vlsi3a.png)  
 This cell module is then used to create the board, below is the top-level block diagram.
