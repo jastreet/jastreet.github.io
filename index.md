@@ -76,7 +76,25 @@ Function GCD (inA, inB, outY)
 In the lab specifications A and B are 32-bits. To achieve a hardware accelerator, Verilog modules from the UW Bespoke Silicon Groups's [basejump_stl](https://github.com/bespoke-silicon-group/basejump_stl) library were used. To pass in data bsg_link was used and compromised the majority of the ASIC layout, however this made testing and interfacing very simple. Shown below is the output from Innovus with floorplanning, bsg_link_downstream is highlighted in blue and bsg_link_upstream in yellow.  
 ![vlis2a](./assets/img/vlsi2a.png)  
 The design was pushed through Conformal LEC for logical equivalency, DRC/LVS, and Tempus for PPA. Below is the merged GDS file viewed in klayout.
-![vlsi2b](./assets/img/vlsi2b.png)
+![vlsi2b](./assets/img/vlsi2b.png)  
+
+#### Conway's Game of Life Accelerator
+The final project of my VLSI-II class was a 32x32 Conway's Game of Life board on a chip. The rules of Conway's Game of Life are simple:
+```
+1. Any live cell with fewer than two live neighbors dies, as if by underpopulation.
+
+2. Any live cell with two or three live neighbors lives on to the next generation.
+
+3. Any live cell with more than three live neighbors dies, as if by overpopulation.
+
+4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+```
+This was converted to a Verilog module, below is the block diagram pre-optimization. (The counter module was removed as an RTL optimization.)
+![vlsi3a](./assets/img/vlsi3a.png)  
+This cell module is then used to create the board, below is the top-level block diagram.
+![vlsi3b](./assets/img/vlsi3b.png)
+The design was pushed through the ASIC flow and PPA analysis was ran for this pre-optimization build. Next RTL, Power, Area, and floorplanning optimizations were attempted for the design. Below is the before and after of the chip's critical path after all optimizations.
+![vlsi3c](./assets/img/vlsi3c.png)
 
 ### Computer Architecture
 #### Pipelined CPU
