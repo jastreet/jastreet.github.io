@@ -89,7 +89,9 @@ The final project of my VLSI-II class was a 32x32 Conway's Game of Life board on
 
 4. Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.  
 
-This was converted to a Verilog module, below is the block diagram pre-optimization. (The counter module was removed as an RTL optimization.)
+Below is 100 frames of the Spiderman logo simulated in Conway's Game of Life to illustrate the rules.
+![vlsi3d](./assets/img/vlsi3d.gif)  
+The rules were converted to a Verilog module that acts as a single cell in the canvas, below is the block diagram pre-optimization. (The counter module was removed as an RTL optimization.)
 ![vlsi3a](./assets/img/vlsi3a.png)  
 This cell module is then used to create the board, below is the top-level block diagram.
 ![vlsi3b](./assets/img/vlsi3b.png)
