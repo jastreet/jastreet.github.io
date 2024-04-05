@@ -4,7 +4,7 @@ layout: default
 
 <a href="./assets/JASResume2023.pdf" target="_blank">My Resume</a>
 
-### Skills: SystemVerilog, C, ARM, Python, MATLAB
+### Skills: SystemVerilog, Cadence Software, C, ARM, Python
 
 ## Education
 B.S. Electrical and Computer Engineering  
