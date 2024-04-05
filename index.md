@@ -97,6 +97,10 @@ This cell module is then used to create the board, below is the top-level block 
 ![vlsi3b](./assets/img/vlsi3b.png)
 The design was pushed through the ASIC flow and PPA analysis was ran for this pre-optimization build. Next RTL, Power, Area, and floorplanning optimizations were attempted for the design. Below is the before and after of the chip's critical path after all optimizations.
 ![vlsi3c](./assets/img/vlsi3c.png)
+The final PPA improvement is as follows:
+* Power: 65.35 mW - 11% improvement
+* Performance: 167.476 Mhz - 2.2% improvement
+* Area: 346,522.342 um^2  - 18.45% improvement
 
 ### Computer Architecture
 #### Pipelined CPU
