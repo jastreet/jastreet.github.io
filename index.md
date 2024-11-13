@@ -2,7 +2,8 @@
 layout: default
 ---
 
-<a href="./assets/JASResume2024.pdf" target="_blank">My Resume</a>
+<a href="./assets/JASResume2024.pdf" target="_blank">My Resume, </a>
+<a href="https://patents.google.com/patent/US11932135B2/" target="_blank">My Patent</a>
 
 ### Skills: SystemVerilog, Cadence Software, C, ARM, Python
 
@@ -32,7 +33,7 @@ Concentration: VLSI Design / Digital Systems Design
 **Engineer @ Li3Go (_June 2022 - Aug 2023_)**
 - Implemented a patented multi-grid power management system using Python on a prototype class A motorhome retrofitted with solar panels.
 - Designed hardware agnostic database schema to support multiple brands of solar inverters.
-- Inventor on USPTO Patent Number US11130422B1.
+- Inventor on USPTO Patent Number US11932135B2.
 
 **Vice President @ Husky Flying Club (_Sept 2020 - June 2024_)**
 - Successfully planned, pitched, and managed a $105,811 grant to build the first UW light-sport aircraft awarded by the Student Tech Fund Committee.
