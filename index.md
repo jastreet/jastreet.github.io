@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<a href="./assets/JASResume2023.pdf" target="_blank">My Resume</a>
+<a href="./assets/JASResume2024.pdf" target="_blank">My Resume</a>
 
 ### Skills: SystemVerilog, Cadence Software, C, ARM, Python
 
@@ -13,12 +13,18 @@ Concentration: VLSI Design / Digital Systems Design
 
 ## Experience
 
-**Capstone Controls Lead @ T-Mobile/UW (_Jan 2024 - Present_)**
+**ASIC/FPGA Design Engineer @ The Boeing Company (_Aug 2024 - Present_)**
+- Level 1 Engineer working in Boeing Electronic Products' ASIC/FPGA Prototyping and Emulation team
+- Supports Boeing Phantom Works and Boeing Disruptive Computing and Networks (DC&N) to prototype and demo hardware designs for space networking devices
+- Developing a python API that synchronizes Xilinx Versal FPGAs in a demo environment to simulate a space router constellation
+- Writing Xilinx Petalinux drivers to interact between SystemVerilog hardware designs and a live-demo API
+
+**Capstone Controls Lead @ T-Mobile/UW (_Jan 2024 - June 2024_)**
 - Working on a team with T-Mobile to implement 3D RF coverage mapping using drone data.
 - Responsible for writing automated flight mapping software to collect RF/network data.
 - Developing a machine learning model to interpolate 3D data.
 
-**Chairman @ UW Engineering Student Council (_June 2023 - Present_)**
+**Chairman @ UW Engineering Student Council (_June 2023 - June 2024_)**
 - Presides over monthly UWESC meetings.
 - Currently writing new UWESC constitution for 2023-24.
 - Organized career fair that raised $40,000 for student clubs.
@@ -28,7 +34,7 @@ Concentration: VLSI Design / Digital Systems Design
 - Designed hardware agnostic database schema to support multiple brands of solar inverters.
 - Inventor on USPTO Patent Number US11130422B1.
 
-**Vice President @ Husky Flying Club (_Sept 2020 - Present_)**
+**Vice President @ Husky Flying Club (_Sept 2020 - June 2024_)**
 - Successfully planned, pitched, and managed a $105,811 grant to build the first UW light-sport aircraft awarded by the Student Tech Fund Committee.
 
 **Student Tech Support @ Spokane Public Schools (_June - Sept, 2018 - 2021_)**
