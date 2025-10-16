@@ -8,10 +8,9 @@ layout: default
 ### Skills: SystemVerilog, Cadence Software, C, ARM, Python
 
 ## Education
-M.S. Electrical Engineering
-University of Washington, Seattle (_June 2028_)  
-B.S. Electrical and Computer Engineering  
-University of Washington, Seattle (_June 2024_)  
+M.S. Electrical Engineering (_June 2028_)  
+B.S. Electrical and Computer Engineering (_June 2024_)  
+University of Washington, Seattle  
 Concentration: VLSI Design / Digital Systems Design
 
 ## Experience
