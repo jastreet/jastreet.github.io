@@ -2,12 +2,14 @@
 layout: default
 ---
 
-<a href="./assets/JASResume2024.pdf" target="_blank">My Resume, </a>
+<a href="./assets/JASResume2025.pdf" target="_blank">My Resume, </a>
 <a href="https://patents.google.com/patent/US11932135B2/" target="_blank">My Patent</a>
 
 ### Skills: SystemVerilog, Cadence Software, C, ARM, Python
 
 ## Education
+M.S. Electrical Engineering
+University of Washington, Seattle (_June 2028_)  
 B.S. Electrical and Computer Engineering  
 University of Washington, Seattle (_June 2024_)  
 Concentration: VLSI Design / Digital Systems Design
